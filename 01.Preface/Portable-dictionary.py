@@ -6,7 +6,7 @@ n = int(input())
 for _ in range(n):
     a = input().split(" ")
 
-    for i in range(3):
+    for i in range(len(a) - 1):
         dictionary[a[i+1]] = a[0]
 
 # sentence that required to be translated
