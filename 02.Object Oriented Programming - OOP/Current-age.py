@@ -2,9 +2,13 @@ import datetime
 
 
 class BirthDay():
+    count = 0
     def __init__(self, birthday) -> None:
         self.birthday = birthday
 
+        BirthDay.count += 1
+    
+    # date validator
     def validate(self):
 
         year, month, day = self.birthday.split("/")
@@ -26,3 +30,12 @@ class BirthDay():
         
         else:
             print("WRONG")
+
+
+date = input()
+a = BirthDay(date)
+a.validate()
+
+
+# By Sina Kazemi
+# https://github.com/sina96n
