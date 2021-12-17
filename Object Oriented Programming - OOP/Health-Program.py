@@ -40,23 +40,31 @@ class School():
 n = int(input())
 A = School("A", n)
 
-inputs = input().split()
-inputs = list(map(int, inputs))
+ages = input().split()
+heights = input().split()
+weights = input().split()
 
+students = zip(ages, heights, weights)
 for i in range(n):
-    student = inputs[3*i:3*i+2]
-    A.add_student(student)
+    student = students[i]
+    student = list(map(int, student))
+
+    A.add_student(student) 
 
 
 n = int(input())
 B = School("B", n)
 
-inputs = input().split()
-inputs = list(map(int, inputs))
+ages = input().split()
+heights = input().split()
+weights = input().split()
 
+students = zip(ages, heights, weights)
 for i in range(n):
-    student = inputs[3*i:3*i+2]
-    B.add_student(student)
+    student = students[i]
+    student = list(map(int, student))
+
+    A.add_student(student) 
 
 
 A.get_age_average()
