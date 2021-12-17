@@ -23,7 +23,7 @@ class School():
         for student in self.students:
             ages.append(student[0])
 
-        self.age_average = round(sum(ages) / len(ages), 1)
+        self.age_average = sum(ages) / len(ages)
 
 
     def get_height_average(self):
@@ -31,7 +31,7 @@ class School():
         for student in self.students:
             heights.append(student[1])
 
-        self.heights_average = round(sum(heights) / len(heights), 1)
+        self.heights_average = sum(heights) / len(heights)
 
 
     def get_weight_average(self):
@@ -39,7 +39,7 @@ class School():
         for student in self.students:
             weights.append(student[2])
 
-        self.weights_average = round(sum(weights) / len(weights), 1)
+        self.weights_average = sum(weights) / len(weights)
 
     
     def __str__(self) -> str:
