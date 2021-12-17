@@ -1,13 +1,18 @@
+# creating School class to hold class A and B 
 class School():
     count = 0
     def __init__(self, name, n) -> None:
+        # initializing with name of class and number of atandees
         self.name = name
         self.n = n
 
+        # students list
         self.students = list() 
         
+        # number of classes
         School.count += 0
 
+    # method to students into class
     def add_student(self, info):
         student = info
         self.students.append(student)
@@ -32,11 +37,16 @@ class School():
     def get_weight_average(self):
         weights = list()
         for student in self.students:
-            weights.append(student[0])
+            weights.append(student[2])
 
         self.weights_average = round(sum(weights) / len(weights), 1)
 
+    
+    def __str__(self) -> str:
+        return f"Class {self.name} with {self.n} students."
 
+
+# GETTING CLASS A INPUPT
 n = int(input())
 A = School("A", n)
 
@@ -44,14 +54,15 @@ ages = input().split()
 heights = input().split()
 weights = input().split()
 
-students = zip(ages, heights, weights)
+students = list(zip(ages, heights, weights))
 for i in range(n):
     student = students[i]
     student = list(map(int, student))
-
+    # adding extracted student to the class
     A.add_student(student) 
 
 
+# GETTING CLASS B INPUPT
 n = int(input())
 B = School("B", n)
 
@@ -59,32 +70,48 @@ ages = input().split()
 heights = input().split()
 weights = input().split()
 
-students = zip(ages, heights, weights)
+students = list(zip(ages, heights, weights))
 for i in range(n):
     student = students[i]
     student = list(map(int, student))
-
+    # adding extracted student to the class
     B.add_student(student) 
 
-
+# Claculating average age, height and weight for class A
 A.get_age_average()
 A.get_height_average()
 A.get_weight_average()
 
+# # Claculating average age, height and weight for class B
 B.get_age_average()
 B.get_height_average()
 B.get_weight_average()
 
+# preparing outputs
 A_info = [A.age_average, A.heights_average, A.weights_average]
 B_info = [B.age_average, B.heights_average, B.weights_average]
 
-output = [A_info, B_info].sort(
+# printing results
+for i in range(3):
+    print(A_info[i])
+for i in range(3):
+    print(B_info[i])
+
+output = sorted(
+    [A_info, B_info],
     key=lambda x: (-x[1], x[2])
 )
 
-for i in output:
-    for j in range(3):
-        print(i[j])
-
+# printing the healthier class
 if (A_info[1] == B_info[1]) and (A_info[2] == B_info[2]):
     print("Same")
+
+elif output[0] == A_info:
+    print("A")
+
+elif output[0] == B_info:
+    print("A")
+
+
+# By Sina Kazemi
+# https://github.com/sina96n
