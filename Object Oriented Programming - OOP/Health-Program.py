@@ -70,3 +70,13 @@ B.get_weight_average()
 A_info = [A.age_average, A.heights_average, A.weights_average]
 B_info = [B.age_average, B.heights_average, B.weights_average]
 
+output = [A_info, B_info].sort(
+    key=lambda x: (-x[1], x[2])
+)
+
+for i in output:
+    for j in range(3):
+        print(i[j])
+
+if (A_info[1] == B_info[1]) and (A_info[2] == B_info[2]):
+    print("Same")
