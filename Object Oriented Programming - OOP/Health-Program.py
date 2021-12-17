@@ -64,7 +64,7 @@ for i in range(n):
     student = students[i]
     student = list(map(int, student))
 
-    A.add_student(student) 
+    B.add_student(student) 
 
 
 A.get_age_average()
