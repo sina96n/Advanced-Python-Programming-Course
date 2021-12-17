@@ -110,7 +110,7 @@ elif output[0] == A_info:
     print("A")
 
 elif output[0] == B_info:
-    print("A")
+    print("B")
 
 
 # By Sina Kazemi
