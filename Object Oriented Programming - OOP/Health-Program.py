@@ -18,8 +18,7 @@ class School():
         for student in self.students:
             ages.append(student[0])
 
-        self.age_average = "{:.1f}".format(sum(ages) / len(ages))
-        print(self.age_average)
+        self.age_average = round(sum(ages) / len(ages), 1)
 
 
     def get_height_average(self):
@@ -27,14 +26,47 @@ class School():
         for student in self.students:
             heights.append(student[1])
 
-        self.heights_average = "{:.1f}".format(sum(heights) / len(heights))
-        print(self.heights_average)
-        
+        self.heights_average = round(sum(heights) / len(heights), 1)
+
 
     def get_weight_average(self):
         weights = list()
         for student in self.students:
             weights.append(student[0])
 
-        self.weights_average = "{:.1f}".format(sum(weights) / len(weights))
-        print(self.weights_average)
+        self.weights_average = round(sum(weights) / len(weights), 1)
+
+
+n = int(input())
+A = School("A", n)
+
+inputs = input().split()
+inputs = list(map(int, inputs))
+
+for i in range(n):
+    student = inputs[3*i:3*i+2]
+    A.add_student(student)
+
+
+n = int(input())
+B = School("B", n)
+
+inputs = input().split()
+inputs = list(map(int, inputs))
+
+for i in range(n):
+    student = inputs[3*i:3*i+2]
+    B.add_student(student)
+
+
+A.get_age_average()
+A.get_height_average()
+A.get_weight_average()
+
+B.get_age_average()
+B.get_height_average()
+B.get_weight_average()
+
+A_info = [A.age_average, A.heights_average, A.weights_average]
+B_info = [B.age_average, B.heights_average, B.weights_average]
+
