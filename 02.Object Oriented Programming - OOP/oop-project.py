@@ -70,3 +70,9 @@ team_b = Player.add_players_by_info(remaining_names, teams[1])
 # printing outputs
 print(*team_a, sep="\n")
 print(*team_b, sep="\n")
+
+
+
+
+# By Sina Kazemi
+# https://github.com/sina96n
