@@ -9,7 +9,7 @@ con = mysql.connect(
 # creating a cursor
 cur = con.cursor()
 
-# writing query to extract all of rows in database
+# writing query to extract all of rows in database ordered by height and weight
 query = "select * from workers order by height desc, weight asc"
 cur.execute(query)
 results = cur.fetchall()
