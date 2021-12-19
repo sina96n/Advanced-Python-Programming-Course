@@ -1,7 +1,7 @@
 import re 
 
 # regular expression for email
-email_regex = r"[\w+\d]+@\w+.\w+"
+email_regex = r"[\w+\d]+@\w+\.\w+"
 
 # email validator function
 # matches the written regex with given email address
