@@ -39,8 +39,13 @@ for ad in ads:
             )
             #print(ad_bottom.text)
 
-            print(f"Title : {title.text} \nPrice : {price} \nAdvertiser : {ad_bottom.text} \n______________\n")
+            print(f"Title : {title.text} \nPrice : {description.text} \nAdvertiser : {ad_bottom.text} \n______________\n")
 
 
-        # else:
-        #     continue
+        else:
+            continue
+
+
+
+# By Sina Kazemi
+# https://github.com/sina96n
