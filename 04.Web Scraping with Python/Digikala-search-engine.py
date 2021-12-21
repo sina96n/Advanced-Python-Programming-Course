@@ -3,9 +3,6 @@ import mysql.connector as mysql
 import requests
 import re
 
-# Salam va arz adab. website true-cars baraye bande bala nemiavord va bar asas matlabi
-# ke rahnamaye dore dar talar goftegu gofte bud az site Digikala estefade kardam. 
-
 
 def digikala_search(search):
     # digikala search algorithm
@@ -75,3 +72,9 @@ def digikala_search(search):
 
 search = input("Search Digikala : ").replace(" ", "-")
 digikala_search(search)
+
+
+
+
+# By Sina Kazemi
+# https://github.com/sina96n
